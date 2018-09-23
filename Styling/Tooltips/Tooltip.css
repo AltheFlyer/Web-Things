@@ -1,0 +1,38 @@
+#header, main{
+	display: grid;
+	grid-template-columns: 225px repeat(2, 1fr);
+	grid-gap: 20px;
+}
+
+aside, #aside-header {
+	grid-column: 1 / 2;
+	background-color: #ccf3ff;
+	padding: 4px;
+}
+
+article, #content-header {
+	grid-column: 2 / 4;
+}
+
+.aside-header h4{
+	margin: 0;
+}
+
+main {
+
+}
+
+span[tooltip] {
+	color: blue;
+}
+
+span[tooltip]:hover:after {
+	color: black;
+	content: attr(tooltip);
+	position: absolute;
+	left: 8px;
+	width: 217px;
+	height: fit-content;
+	padding: 4px;
+	background-color: #ccf3ff;
+}

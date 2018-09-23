@@ -1,0 +1,52 @@
+.gallery {
+	background-color: black;
+	align-items: center;
+}
+
+.gallery .topbar {
+	text-align: center;
+	color: white;
+	height: 100px;
+}
+
+.gallery hr {
+	margin : 0;
+	background-color: white;
+}
+
+.gallery .topbar h2 {
+	margin: 0;
+}
+
+.gallery .images {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	/*
+	animation-name: slide;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	*/
+}
+
+.gallery .images div img{
+	opacity: 0.7;
+}
+
+.gallery .images div img:hover {
+	opacity: 1.0;
+}
+
+.fill {
+	height: 1000px;
+}
+
+@keyframes slide{
+	from {
+		left: -100%;
+	}
+	to {
+		left: 100%;
+	}
+}
