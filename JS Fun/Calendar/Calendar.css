@@ -1,0 +1,58 @@
+/*Calendar*/
+table {
+	border: 2px solid grey;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+tr {
+	
+}
+
+td {
+	width: 75px;
+	height: 75px;
+	border: 2px solid grey;
+	vertical-align: top;
+}
+
+.month {
+	vertical-align: none;
+	text-align: center;
+}
+
+.days td{
+	height: auto;
+}
+
+.day:hover {
+	background-color: #d9f1f9;
+}
+
+.previous {
+	background-color: #79fc9e;
+}
+
+.today {
+	background-color: #fffc82;
+}
+
+.today {
+	
+}
+
+/*Set flex*/
+.wrapper {
+	display: flex;
+}
+
+.calendar {
+	padding: 10px;
+	min-width: 555px;
+}
+
+.data {
+	background-color: #d9f1f9;
+	margin: 10px;
+	flex: auto;
+}

@@ -1,0 +1,92 @@
+header {
+	height : 100px;
+	font-family : "Century Gothic";
+	font-size : 48px;
+	text-indent : 10px;
+}
+a {
+	color : black;
+}
+
+body, html {
+	height: 100%;
+}
+
+#background {
+	background-image: url("OuterSpace.jpg");
+	
+	height: 900px;
+	
+	/* Parallax effect */
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.Hooke {
+	width: 90%;
+	height: 100%;
+	margin-left: 5%;
+	background-color: rgba(162, 255, 147, 0.2);
+}
+
+.Hooke p, ul {
+	color: white;
+	font-size: 14px;
+	font-family: "Calibri";
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+}
+
+ul {
+	color: black;
+	background-color: #a8a8a8;
+	text-align: 100px, 100px;
+}
+
+li {
+	margin-right: 5px;
+	padding: 5px 5px;
+}
+li:nth-of-type(even) {
+	background-color: #a8a8a8;
+}
+
+li:nth-of-type(odd) {
+	background-color: #c9c9c9;
+}
+
+.sep {
+	font-family: 'Calibri';
+	font-size: 16px;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	padding-top: 42px;
+}
+
+.galaxy {
+	background-image: url("galaxy.jpg");
+	
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	height: 100%;
+}
+
+footer {
+	position: fixed;
+	bottom:0px;
+	height: 150x;
+	background-color: #81f76f;
+}
+
+footer p {
+	font-family: "Calibri";
+	font-size: 12px;
+}

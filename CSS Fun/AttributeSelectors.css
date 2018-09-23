@@ -1,0 +1,72 @@
+/*All things with data-country are styled*/
+[data-country] {
+	font-family: "Century Gothic";
+	font-size: 24px;
+	color:black;
+}
+
+/*Selection based on data value (exact)*/
+[data-country="Where I'm From"] {
+	color: green;
+	border: 1px solid black;
+	border-color: green;
+}
+
+/*Selection based on if data value contains the terms*/
+[data-country~="From"] {
+	background-color: pink;
+}
+
+/*Selection based on exact value*/
+[lang |= "fr"] {
+	font-style: italic;
+}
+
+/*Selection based on starting term*/
+[data-type ^="solid"] {
+	font-weight: bold;
+	color: gray;
+}
+
+[data-type ^="liquid"] {
+	color: blue;
+}
+
+/*Selection based on ending term*/
+[data-type $="metal"] {
+	text-shadow: 1px 1px 1px black;
+}
+
+/*As nonmetal ends in metal, things like carbon are styled*/
+/*You can unstyle to remove things like that*/
+/*Selection based on substring (if it contains it)*/
+[data-type *="nonmetal"] {
+	text-shadow: none;
+}
+
+.split {
+	width: 80%;
+	height: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	/*This is the only way I know to color this*/
+	background-color: goldenrod;
+	border: 0 none;
+}
+
+header {
+	height: 100px;
+	font-family: "Century Gothic";
+	font-size: 48px;
+	text-indent: 10px;
+	background-color: 
+}
+
+a {
+	color: black;
+}
+
+.chemistry {
+	font-family: "Bell MT";
+	font-size: 24px;
+}

@@ -1,0 +1,26 @@
+.layer {
+	height: 200px;
+	width: 200px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+	position: relative;
+}
+
+.layer:before {
+	content: "";
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 86, 86, 0.5));
+}
+
+.layer:after {
+	content: "";
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: linear-gradient(to right, rgba(255, 0, 255, 0.5), rgba(255, 0, 0, 0.5));
+}

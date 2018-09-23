@@ -1,0 +1,27 @@
+.good {
+	color: green
+}
+.bad {
+	color:red
+}
+.comic{
+	/*Fonts include serif, sanserif, monospace, cursive, and fantasy*/
+	font-family: cursive;
+}
+.stack{
+	/*Will choose the first font in the list that is available*/
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+.small{
+	font-size: 5px;
+}
+.medium{
+	font-size: 16px;
+}
+.large{
+	font-size: 48px;
+}
+.shadow{
+	text-shadow: -3px -3px 3px black,
+				  3px 3px 3px black;
+}

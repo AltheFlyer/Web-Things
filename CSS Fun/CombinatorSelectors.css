@@ -1,0 +1,70 @@
+/*Header stuff*/
+header {
+	height: 100px;
+	font-family: "Century Gothic";
+	font-size: 48px;
+	text-indent: 10px;
+	background-color: 
+}
+
+a {
+	color: black;
+}
+
+/*Group of selectors (not a combinator)*/
+.first, .second{
+	font-family: "Calibri";
+	font-size: 16px;
+}
+
+/*Find child of the first listed element
+Given A B  find all B that are descendents of A
+To find only direct children, use A>B
+*/
+ul li:nth-of-type(odd){
+	font-family: Calibri;
+	color: white;
+	margin-bottom: 3px;
+	background-color: #b67ecc;
+	width:330px;
+}
+
+ul li:nth-of-type(even){
+	font-family: Calibri;
+	color: white;
+	margin-bottom: 3px;
+	background-color: #9e53bc;
+	width:330px;
+}
+
+table{
+	border: 2px solid #30c15c;
+	/*background: #32d162;*/
+	border-collapse: collapse;
+	font-family:Calibri;
+}
+
+td, th {
+  border: 2px solid #30c15c;
+  background-color:white;
+  padding: 4px 4px;
+}
+
+/*Checks for sibling elements that are right after the first specified one
+Given A + B
+check if A preceeds B before styling
+*/
+td.planet + td{
+	background-color: #54d87c;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/*
+Given A ~ B, 
+checks if B is a sibling that is any number of elements after A
+*/
+td.planet + td ~ td{
+	background-color: #76ed9a;
+	text-align: center;
+}

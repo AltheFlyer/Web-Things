@@ -1,0 +1,24 @@
+body {
+	font: 14px "Open Sans";
+}
+
+input {
+	font: 12px "Open Sans";
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+li {
+	list-style-type: none;
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 5px auto;
+}
+
+h3 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

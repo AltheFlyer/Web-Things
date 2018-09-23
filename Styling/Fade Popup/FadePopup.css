@@ -1,0 +1,53 @@
+body {
+	font-family: "Calibri";
+}
+
+#active {
+	width: 100px;
+	height:100px;
+	background: blue;
+	font-size: 60px;
+}
+
+#popup {
+	visibility: hidden;	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+}
+
+#close {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+#close:hover {
+	filter: opacity(50%);
+}
+
+#popup .content {
+	width: 90%;
+	height: 400px;
+	background: red;
+	position: absolute;
+	left: 5%;
+	top: 75px;
+	padding: 8px;
+}
+
+#popup .content h2, #popup .content h3 {
+	text-align: center;
+}
+
+.filler {
+	height: 1000px;
+}
+
+iframe {
+	display: block;
+}

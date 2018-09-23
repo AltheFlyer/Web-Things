@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href = "MenuSite.css" rel = "stylesheet" type = "text/css">
+	</head>
+	
+	<body>
+		<!--This is the menubar that is always visible-->
+		<div id = "menu">
+			<h1>Site</h1>
+			<div><button class = "main">About</button></div>
+			<div><button class = "main">Index</button></div>
+			<div class = "other dropdown">
+				<button class = "main dropbtn">Other</button>
+				<div class = "other dropdown-content">
+					<button class = "other dropdown-button">Number 1</button>
+					<button class = "other dropdown-button">Number 2</button>
+					<button class = "other dropdown-button">Number 3</button>
+				</div>
+			</div>
+			<div class = "other dropdown">
+				<button class = "main dropbtn">Extra</button>
+				<div class = "other dropdown-content">
+					<button class = "other dropdown-button">Number 4</button>
+					<button class = "other dropdown-button">Number 5</button>
+					<button class = "other dropdown-button">Number 6</button>
+				</div>
+			</div>
+		</div>
+		
+		<!--Links to the articles within the page-->
+		<div id = "page-link">
+			<h2>Quick links</h2>
+			<ul>
+				<li><a href = "#intro">Introduction</a></li>
+				<li><a href = "#example">Examples</a></li>
+			</ul>
+		</div>
+		
+		<hr>
+
+		<details id = "introduction" open = "true">
+			<a class = "anchor" name="intro"></a>
+			<summary>Introduction</summary>
+			<p>
+				Lorem ipsum dolor sit amet, 
+				<span class = "tooltip">
+					consectetur
+					<span class="tooltiptext">This word has no meaning</span>
+				</span>
+				adipiscing elit. 
+				Cras lobortis viverra sem et dapibus. Donec cursus sollicitudin
+				congue. Praesent non arcu a ante pretium porttitor et sit
+				amet leo. Morbi fermentum sagittis nisi nec fringilla. Curabitur
+				accumsan imperdiet dignissim. Praesent hendrerit, ipsum semper
+				elementum tempus, purus magna luctus purus, at vulputate nisi
+				eros maximus tortor. Curabitur eget diam et erat rutrum suscipit.
+				Curabitur eu augue nisi. Maecenas ut elementum quam, lobortis
+				vestibulum ipsum. Phasellus pretium enim justo, sit amet elementum
+				augue euismod ac. Morbi ultricies tortor non neque dignissim 
+				consectetur. Etiam at interdum mi.
+			</p>
+			<p>
+				Fusce tristique massa sit amet nunc congue, in volutpat odio 
+				faucibus. Ut posuere purus eget laoreet facilisis. Maecenas 
+				imperdiet vel urna vel iaculis. Fusce erat mauris, blandit eu 
+				suscipit porttitor, rhoncus id ex. Donec ut tellus sapien. Donec 
+				urna nisi, tincidunt ut tellus dictum, venenatis cursus ipsum. 
+				Pellentesque pretium euismod luctus. Cras hendrerit eros metus, 
+				id malesuada sem accumsan sit amet. Aenean dictum tincidunt libero,
+				sit amet scelerisque eros lobortis eu. Aenean malesuada est in 
+				lorem pretium sagittis. Cras quis vestibulum sem.
+			</p>
+			<p>
+				Phasellus vulputate velit felis, malesuada rutrum est egestas in.
+				Duis ultrices varius ipsum, vitae congue massa consectetur sed.
+				Quisque egestas iaculis mollis. Sed odio tellus, hendrerit ac 
+				nulla eu, luctus dignissim sem. Vivamus blandit enim metus, at 
+				ullamcorper quam lobortis non. Sed cursus iaculis nunc sit amet 
+				vehicula. Nam porttitor, justo eget pretium fermentum, massa nulla 
+				vehicula justo, vel tincidunt elit velit sed eros. Quisque accumsan
+				facilisis est vitae fermentum. Fusce posuere orci nisi, ultrices
+				molestie sem semper id. Nam lacinia luctus erat, vitae convallis 
+				arcu pharetra quis. Aliquam sagittis mi a odio euismod, tincidunt
+				elementum orci suscipit. Aliquam nec lorem ac urna gravida semper 
+				vel at velit. Duis sit amet efficitur justo. Phasellus augue leo,
+				tristique non massa ac, suscipit sodales enim. Proin felis diam,
+				dictum eget urna ut, luctus convallis est.
+			</p>
+			<p>
+				Aenean ut urna iaculis, sodales lorem ut, tincidunt augue. Phasellus
+				vel rhoncus velit, nec dapibus nisl. Cras sit amet lorem mollis, 
+				sagittis metus sed, aliquet odio. Fusce malesuada dolor nunc, in 
+				efficitur odio placerat non. Sed ac auctor ligula, sed cursus nulla. 
+				Maecenas non accumsan felis. Pellentesque habitant morbi tristique 
+				senectus et netus et malesuada fames ac turpis egestas.
+			</p>
+			<p>
+				Cras at tortor interdum nunc egestas pulvinar. Vestibulum aliquam 
+				interdum orci, id scelerisque lectus tincidunt in. Ut dolor diam, 
+				placerat a lobortis eu, viverra sit amet 
+				<span class = "tooltip">
+					leo.
+					<span class = "tooltiptext">It's Leo the Lion.</span>
+				</span>
+				Etiam sed ultrices risus, 
+				id sagittis nibh. Ut vulputate sapien vitae urna euismod, sit amet 
+				eleifend nulla sollicitudin. Suspendisse dignissim mollis molestie. 
+				Nulla nec augue lobortis sem feugiat tincidunt a tempor augue. Curabitur
+				vel dictum arcu, ac suscipit ligula. Pellentesque porta, ipsum sit amet 
+				pharetra mattis, ipsum purus sodales ante, eu pretium magna neque placerat
+				ipsum. Etiam dapibus efficitur nisi in laoreet. Phasellus tincidunt nibh
+				in vulputate lacinia. Fusce vitae massa odio. Proin sed odio ligula. 
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+				cubilia Curae; Ut et scelerisque velit. 
+			</p>
+		</details>
+		<hr>
+		
+		<details id = "examples" open = "true">
+			<a class = "anchor" name="example"></a>
+			<summary>Examples</summary>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Cras lobortis viverra sem et dapibus. Donec cursus sollicitudin
+				congue. Praesent non arcu a ante pretium porttitor et sit
+				amet leo. Morbi fermentum sagittis nisi nec fringilla. Curabitur
+				accumsan imperdiet dignissim. Praesent hendrerit, ipsum semper
+				elementum tempus, purus magna luctus purus, at vulputate nisi
+				eros maximus tortor. Curabitur eget diam et erat rutrum suscipit.
+				Curabitur eu augue nisi. Maecenas ut elementum quam, lobortis
+				vestibulum ipsum. Phasellus pretium enim justo, sit amet elementum
+				augue euismod ac. Morbi ultricies tortor non neque dignissim 
+				consectetur. Etiam at interdum mi.
+			</p>
+			<p>
+				Fusce tristique massa sit amet nunc congue, in volutpat odio 
+				faucibus. Ut posuere purus eget laoreet facilisis. Maecenas 
+				imperdiet vel urna vel iaculis. Fusce erat mauris, blandit eu 
+				suscipit porttitor, rhoncus id ex. Donec ut tellus sapien. Donec 
+				urna nisi, tincidunt ut tellus dictum, venenatis cursus ipsum. 
+				Pellentesque pretium euismod luctus. Cras hendrerit eros metus, 
+				id malesuada sem accumsan sit amet. Aenean dictum tincidunt libero,
+				sit amet scelerisque eros lobortis eu. Aenean malesuada est in 
+				lorem pretium sagittis. Cras quis vestibulum sem.
+			</p>
+			<p>
+				<span class = "tooltip">
+					Phasellus
+					<span class = "tooltiptext">
+						In fact, this is just a copy paste of the <a href = "#intro">last section.</a>
+					</span>
+				</span>
+				vulputate velit felis, malesuada rutrum est egestas in.
+				Duis ultrices varius ipsum, vitae congue massa consectetur sed.
+				Quisque egestas iaculis mollis. Sed odio tellus, hendrerit ac 
+				nulla eu, luctus dignissim sem. Vivamus blandit enim metus, at 
+				ullamcorper quam lobortis non. Sed cursus iaculis nunc sit amet 
+				vehicula. Nam porttitor, justo eget pretium fermentum, massa nulla 
+				vehicula justo, vel tincidunt elit velit sed eros. Quisque accumsan
+				facilisis est vitae fermentum. Fusce posuere orci nisi, ultrices
+				molestie sem semper id. Nam lacinia luctus erat, vitae convallis 
+				arcu pharetra quis. Aliquam sagittis mi a odio euismod, tincidunt
+				elementum orci suscipit. Aliquam nec lorem ac urna gravida semper 
+				vel at velit. Duis sit amet efficitur justo. Phasellus augue leo,
+				tristique non massa ac, suscipit sodales enim. Proin felis diam,
+				dictum eget urna ut, luctus convallis est.
+			</p>
+			<p>
+				Aenean ut urna iaculis, sodales lorem ut, tincidunt augue. Phasellus
+				vel rhoncus velit, nec dapibus nisl. Cras sit amet lorem mollis, 
+				sagittis metus sed, aliquet odio. Fusce malesuada dolor nunc, in 
+				efficitur odio placerat non. Sed ac auctor ligula, sed cursus nulla. 
+				Maecenas non accumsan felis. Pellentesque habitant morbi tristique 
+				senectus et netus et malesuada fames ac turpis egestas.
+			</p>
+			<p>
+				Cras at tortor interdum nunc egestas pulvinar. Vestibulum aliquam 
+				interdum orci, id scelerisque lectus tincidunt in. Ut dolor diam, 
+				placerat a lobortis eu, viverra sit amet leo. Etiam sed ultrices risus, 
+				id sagittis nibh. Ut vulputate sapien vitae urna euismod, sit amet 
+				eleifend nulla sollicitudin. Suspendisse dignissim mollis molestie. 
+				Nulla nec augue lobortis sem feugiat tincidunt a tempor augue. Curabitur
+				vel dictum arcu, ac suscipit ligula. Pellentesque porta, ipsum sit amet 
+				pharetra mattis, ipsum purus sodales ante, eu pretium magna neque placerat
+				ipsum. Etiam dapibus efficitur nisi in laoreet. Phasellus tincidunt nibh
+				in vulputate lacinia. Fusce vitae massa odio. Proin sed odio ligula. 
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+				cubilia Curae; Ut et scelerisque velit. 
+			</p>
+		</details>
+		<hr>
+		
+	</body>
+</html>

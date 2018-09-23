@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Allen Liu">
+		<meta name="description" content="Glossary and stuff">
+		<title>Advanced html</title>
+	</head>
+	
+	<body>
+	<a href = "Home.html">Take me back.</a>
+	<!-- Description List-->
+		<dl>
+			<!--Description Term-->
+			<dt>Soliloquy</dt>
+			<!-- Description Definition-->
+			<dd>
+			In drama, where a character speaks to themselves,
+			representing their inner thoughts or feelings and in 
+			the process relaying them to the audience 
+			(but not to other characters.)
+			</dd>
+		</dl>
+	<!-- Quotes -->
+	<!-- Block Quote-->
+	<blockquote>
+	Block quotes are for longer quotes, separated from the main text
+	</blockquote>
+	<p>
+	And for normal intext quotes, you can do <q>this.</q></p>
+	We use 
+	<abbr title="Hypertext Markup Language">HTML</abbr> 
+	to structure our web documents.<br>
+	For exponents, (ab)<sup>m</sup> = a<sup>m</sup>b<sup>m</sup><br></br>
+	In Photosynthesis, Carbon Dioxide, Water, and Light produce Sugar and Oxygen:<br>
+	6CO<sub>2</sub> + 6H<sub>2</sub>O + Light Energy = C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub>
+	</p>
+	
+	<!-- retain whitespace-->
+	<pre>
+	<code>
+	//Code Stuff
+	int sum = 0;
+	for (int i = 0; i < n; ++i) {
+		sum += i;
+	}
+	System.out.println("The sum is " + sum);
+	</code>
+	</pre>
+	<p>In the code above, <var>i</var> is the value that keeps increasing, 
+	<var>n</var> is the number of values of i to have, and 
+	<var>sum</var> is the sum of all values of <var>i</var>.
+	If you were to run this with <var>n</var> = 5, then this would be the output:
+	</p>
+	<!-- This denotes code output-->
+	<samp>The sum is 8</samp>
+	<!-- kbd denotes keyboard input-->
+	<p>To refresh the page, type <kbd>Ctr</kbd> + <kbd>F5</kbd>.</p>
+	
+	<!-- Use the time element for machine-readability-->
+	<!-- Standard -->
+	<time datetime = "2018-05-27"> May 27<sup>th</sup> 2018</time><br>
+	<!-- Year Month-->
+	<time datetime = "2018-05"> May 2018</time><br>
+	<!-- Month Day -->
+	<time datetime = "05-27"> May 27<sup>th</sup></time><br>
+	<!-- Hours, Minutes (in 24 hour time)-->
+	<time datetime = "11:40"> 11:30 am</time><br>
+	<!-- Hours, Minutes, Seconds and milliseconds -->
+	<time datetime = "11:47:30.574"> 11:47:30.856</time><br>
+	<!-- With timezone offset-->
+	<time datetime = "2018-05-27T11:50 +01:00">11:50 am, May 27<sup>th</sup> is 12:50 pm somewhere else?</time><br>
+	<!-- Week-->
+	<time datetime = "2018-W23"> The 23<sup>rd</sup> week of 2018</time>
+	
+	</body>
+
+</html>

@@ -1,0 +1,127 @@
+header {
+	height : 100px;
+	font-family : "Century Gothic";
+	font-size : 48px;
+	text-indent : 10px;
+}
+
+a {
+	color : black;
+}
+
+body {
+	font-family: "Open Sans";
+}
+
+div div {
+	background-color: #70ff6b;
+	/*margin: 4px;*/
+	padding: 4px;
+	border: 2px solid #3fe539;
+	border-radius: 3px;
+	box-shadow: 2px 2px 2px #58d854;
+}
+
+.simple {
+	display: grid;
+	/*Define columns*/
+	grid-template-columns: 100px 100px 100px;
+}
+
+.weight {
+	display: grid;
+	/*Define columns with weighted units, based on available space*/
+	grid-template-columns: 1fr 2fr 1fr;
+	/*Margin not necessary because of this*/
+	/*Duplicate for safety*/
+	grid-gap: 8px;
+	gap: 8px
+}
+
+.repeat {
+	/*Using repeat function for quick grid creation*/
+	grid-template-columns: repeat(3, 100px);
+	/*Rows are automatically generated in this case
+	This is used to auto size them to a value*/
+	grid-auto-rows: 75px;
+	/*Minmax function used to ensure sizing can fit anything*/
+	grid-auto-rows: minmax(75px, auto);
+}
+
+/*Defining areas by lines*/
+.line {
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	grid-gap: 10px;
+}
+
+.line .head {
+	grid-column: 1/10;
+	grid-row: 1;
+}
+
+.line .left {
+	grid-column: 1/4;
+	grid-row: 3;
+}
+
+.line .right {
+	grid-column: 5/10;
+	grid-row: 3;
+}
+
+/*The same as above*/
+.areas {
+	display: grid;
+	/*
+	Every grid square must be defined
+	. denotes an empty square
+	*/
+	grid-template-areas:
+		"head head head head head head head head head"
+		"left left left . right right right right right"
+		". a . b . c . d ."
+		"e . f . g . h . i";
+	grid-template-columns: repeat(9, 1fr);
+	grid-gap: 10px;
+}
+
+.areas .head {
+	grid-area: head;
+}
+
+.areas .left {
+	grid-area: left;
+}
+
+.areas .right {
+	grid-area: right;
+}
+
+.areas .a {
+	grid-area: a;
+}
+.areas .b {
+	grid-area: b;
+}
+.areas .c {
+	grid-area: c;
+}
+.areas .d {
+	grid-area: d;
+}
+.areas .e {
+	grid-area: e;
+}
+.areas .f {
+	grid-area: f;
+}
+.areas .g {
+	grid-area: g;
+}
+.areas .h {
+	grid-area: h;
+}
+.areas .i {
+	grid-area: i;
+}

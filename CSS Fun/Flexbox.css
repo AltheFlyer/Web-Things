@@ -1,0 +1,56 @@
+header {
+	height : 100px;
+	font-family : "Century Gothic";
+	font-size : 48px;
+	text-indent : 10px;
+}
+
+a {
+	color : black;
+}
+
+body {
+	font-family: "Open Sans";
+}
+
+article {
+	background-color: #60aef7;
+	padding: 5px;
+	margin: 5px;
+	
+	/*Weighted value for how much proportional space is taken*/
+	flex: 1;
+}
+
+article:nth-of-type(3) {
+	/*Also giving a minimum value for width*/
+	flex: 2 100px;
+}
+
+section {
+	display: flex;
+}
+
+/*Spacing buttons evenly */
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	/*allows for button wrap*/
+	flex-wrap: wrap;
+}
+
+button {
+	margin: 2px;
+}
+
+/*Order makes things go out of source order*/
+/*Order = 0 by default*/
+button:nth-of-type(5n) {
+	order: -1;
+}
+
+button:nth-of-type(5n-1) {
+	order: 1;
+}

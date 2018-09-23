@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "author" content = "Allen Liu">
+		<meta name = "description" content = "Learning about tables">
+		<title>Tables are Fun</title>
+		<link href = "Tables.css" rel = "stylesheet" type = "text/css"> 
+	</head>
+	
+	<body>
+		<!--td for table data, tr for table rows-->
+		<!-- must be enclosed within table-->
+		<!-- tables don't come with styling, so by default they won't have anything-->
+		<table>
+			<td>Cell 1</td>
+			<td>Cell 2</td>
+			<td>Cell 3</td>
+			<td>Cell 4</td>
+		</table>
+		
+		<br></br>
+		<!-- Now with style-->
+		<table class="style">
+			<td class="style">Cell 1</td>
+			<td class="style">Cell 2</td>
+			<td class="style">Cell 3</td>
+			<td class="style">Cell 4</td>
+		</table>
+		
+		<br></br>
+		
+		<!-- Headers, and multi-row-->
+		<table class="style">
+			<tr class = "style">
+				<td class="style">x</td>
+				<th class="style" scope = "col">1</td>
+				<th class="style" scope = "col">2</td>
+				<th class="style" scope = "col">3</td>
+			</tr>
+			<tr class = "style">
+				<th class="style" scope = "row">1</td>
+				<td class="style">1</td>
+				<td class="style">2</td>
+				<td class="style">3</td>
+			</tr>
+			<tr class = "style">
+				<th class="style" scope = "row">2</td>
+				<td class="style">2</td>
+				<td class="style">4</td>
+				<td class="style">6</td>
+			</tr>
+			<tr class = "style">
+				<th class="style" scope = "row">3</td>
+				<td class="style">3</td>
+				<td class="style">6</td>
+				<td class="style">9</td>
+			</tr>
+		</table>
+		
+		<br></br>
+		
+		<!-- Multi-box-->
+		<table class = "style">
+			<tr class = "style">
+				<th class="style" colspan = "5" scope = "col">EXPAND</th>
+			</tr>
+			<tr class = "style">
+				<td class = "style">1...</td>
+				<td class = "style">2...</td>
+				<td class = "style">3...</td>
+				<td class = "style">4...</td>
+				<td class = "style" rowspan = "2">EXPAND</td>
+			</tr>
+			<tr class = "style">
+				<td class = "style">1...</td>
+				<td class = "style">2...</td>
+				<td class = "style">3...</td>
+				<td class = "style">4...</td>
+			</tr>
+		</table>
+		
+		<br></br>
+		<!-- Table Groups-->
+		<table class = "style">
+			<colgroup>
+				<col>
+				<col style="background-color: red" span ="2">
+				<col>
+				<col>
+			</colgroup>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

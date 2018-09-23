@@ -1,0 +1,63 @@
+/*The main circle*/
+.yin-yang {
+	width: 200px;
+	height: 200px;
+	/*Top half is black, bottom half is white*/
+	background: linear-gradient(to bottom, black, black 50%, white 50%, white);
+	border: 2px solid black;
+	border-radius: 50%;
+	/*This is for the next part*/
+	position: relative;
+}
+
+/*Left circle*/
+.yin-yang:before {
+	content: "";
+	position: absolute;
+	top: 25%;
+	left: 0%;
+	width: 50%;
+	height: 50%;
+	/*Black inside, white outside*/
+	background: radial-gradient(black, black 20%, white 20%, white);
+	border-radius: 50%;
+}
+
+.yin-yang:after {
+	content: "";
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	width: 50%;
+	height: 50%;
+	/*White inside, black outside*/
+	background: radial-gradient(white, white 20%, black 20%, black);
+	border-radius: 50%;
+}
+
+/*Rotation*/
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.rotate {
+	animation-name: rotate;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.ease {
+	animation-name: rotate;
+	animation-duration: 4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}

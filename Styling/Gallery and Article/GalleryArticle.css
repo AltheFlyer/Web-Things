@@ -1,0 +1,32 @@
+body {
+	display: grid;
+	grid-template-columns: 225px repeat(2, 1fr);
+	grid-gap: 10px;
+	font-family: 'Calibri';
+}
+
+header {
+	grid-column: 1/4;
+	grid-row: 1;
+	text-align: center;
+}
+
+main {
+	grid-column: 2/4;
+	grid-row: 2;
+	background-color: #d8f0ff;
+	padding: 4px;
+}
+
+aside {
+	grid-column: 1/2;
+	grid-row: 2;
+	background-color: #d8f0ff;
+	padding: 4px;
+}
+
+footer {
+	grid-column: 1/4;
+	grid-row: 3;
+	background-color: black;
+}

@@ -1,0 +1,38 @@
+﻿/*CSS declaration works as Property:Value*/
+colored {
+    color:green;
+}
+bordered {
+    border: 1px solid black;
+}
+background {
+    background-color:pink;
+}
+underline {
+    text-decoration:underline;
+}
+weird {
+    color:crimson;
+    text-decoration: underline dotted red;
+}
+wrong { 
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+
+left {
+    width:48%;
+    float: left;
+}
+
+right {
+    width: 48%;
+    float: right;
+}
+
+center {
+    width: 70%;
+    padding-right: 15%;
+    padding-left: 15%;
+}

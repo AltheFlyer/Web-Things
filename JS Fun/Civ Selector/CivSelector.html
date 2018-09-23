@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "author" content = "Allen Liu">
+		<meta name = "description" content = "For Civ 5">
+		<title>Civ 5 Generator</title>
+		<link href="CivSelector.css" rel = "stylesheet" type = "text/css">
+	</head>
+
+	<body>
+		<h1>Civ 5 Generator</h1>
+		<div class = "pools">
+			<h2>Civ Pools</h2>
+			<!--The civs that can be selected-->
+			<div class = "civList">
+			<h4>List of possible civs</h4>
+				<select class = "pool"></select>
+			</div>
+			
+			<!--The civs that can't be selected-->
+			<div class = "banList">
+			<h4>Civs that have been banned</h4>
+				<select class = "banned"></select>
+			</div>
+			
+			<!--The civs that have been selected-->
+			<div class = "selectList">
+			<h4>Civs that have been chosen</h4>
+				<select class = "selected"></select>
+			</div>
+		</div>
+		
+		<div class = "actions">
+			<h2>Pick/ban civs</h2>
+			<div class = "interact">
+				<h3>Manual Actions</h3>
+				<div class = "buttons">
+					<button class = "ban move" title = "Moves the civ in the current pool to the ban pool.">
+						Ban civ
+					</button>
+					
+					<button class = "unban move" title = "Moves the civ in the ban pool to the civ pool.">
+						Unban civ
+					</button>
+					
+					<button class = "select move" title = "Selects the civ in the civ pool.">
+						Select civ
+					</button>
+					
+					<button class = "deselect move" title = "Deselects the civ in the selected pool.">
+						Deselect civ
+					</button>
+				</div>
+				<div class = "buttons">
+					<button class = "unbanall" title = "Unbans all civs.">
+						Unban all
+					</button>
+					<button class = "deselectall" title = "Deselects all civs.">
+						Deselect all
+					</button>
+				</div>
+			</div>
+			
+			<div class = "rando">
+				<!--The Randomizer-->
+				<h3>Randomizer</h3>
+				<div class = "buttons">
+				<button class = "random">Randomize</button>
+				</div>
+				<input type="number" value = "1" class = "randNumber" title = "How many civs to select.">
+			</div>
+		</div>
+		
+		<!-- Displays the text of all the lists-->
+		<div class = "display">
+			<h2>Civ Lists</h2>
+			<div class = "civDisplay">
+				<h3>Civ Pool</h3>
+				<ol>
+				</ol>
+			</div>
+			<div class = "banDisplay">
+				<h3>Banned Civs</h3>
+				<ol>
+				</ol>
+			</div>
+			<div class = "selectDisplay">
+				<h3>Selected Civs</h3>
+				<ol>
+				</ol>
+			</div>
+		</div>
+		
+		<script src = "CivSelector.js"></script>
+	</body>
+</html>

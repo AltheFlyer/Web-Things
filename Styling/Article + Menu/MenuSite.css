@@ -1,0 +1,124 @@
+/*Menu is always visible*/
+#menu {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #7a7f76;
+	display: flex;
+	margin: 0;
+	z-index: 10;
+}
+
+#menu h1 {
+	line-height: 0px;
+	margin: auto 50px;
+}
+
+#menu button {
+	background-color: #7a7f76;
+	min-width: 100px;
+	height: 50px;
+	border: 2px solid #70756d;
+	border-width: 2px 1px;
+}
+
+/*Normalize button borders*/
+#menu div:first-of-type button.main{
+	border-left-width: 2px;
+}
+
+/*Normalize button borders*/
+#menu div:last-of-type button.main{
+	border-right-width: 2px;
+}
+
+#menu button:hover {
+	background-color: #a0a59b;
+}
+
+/*Dropdown buttons in the menu*/
+#menu .dropdown {
+	display: inline-block;
+}
+
+#menu .dropdown .dropdown-content {
+	display: none;
+	position: absolute;
+}
+
+#menu .dropdown .dropdown-content button{
+	display: block;
+	border-top: none;
+}
+
+#menu .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/*Link to things within the page*/
+#page-link {
+	background-color: #dce5d7;
+	margin-top: 75px;
+	padding: 10px;
+	width: 200px;
+}
+
+/*Anchors account for menubar*/
+.anchor:target {
+	position: relative;
+	top: -90px;
+}
+
+/*Make summary elements title-like*/
+summary {
+	font-size: 24px;
+	background: linear-gradient(to bottom, #cbcbcb, white);
+	padding: 10px 10px;
+	
+	/*Summary acts as following sub-header*/
+	position: sticky;
+	top: 50px;
+	
+	z-index: 1;
+}
+
+hr {
+	margin-bottom: 0px;
+}
+
+.tooltip {
+	color: #fdd26b;
+	position: relative;
+}
+
+.tooltip .tooltiptext {
+	background-color: #fdd26b;
+	border-radius: 6px;
+	bottom: 21px;
+	left: -5px;
+	color: #ffffff;
+	width: 100%;
+	padding: 5px;
+	position: absolute;
+	text-align: center;
+	visibility: hidden;
+	z-index: 3;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+/*A triangle*/
+.tooltiptext:after {
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdd26b transparent transparent transparent;
+	content: " ";
+	left: 50%;
+	margin-left: -5px;
+	position: absolute;
+	top: 100%;
+}

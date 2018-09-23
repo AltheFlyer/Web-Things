@@ -1,0 +1,41 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box {
+	width: 200px;
+	height:200px;
+	border: 20px solid transparent;
+	border-color: red yellow green blue;
+	margin: 20px 20px;
+}
+
+.round {
+	border-radius: 50%;
+}
+
+.bullet {
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+.extreme {
+	border-top-right-radius: 200px;
+	border-bottom-right-radius: 200px;
+}
+
+.pill {
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.wtf {
+	width: 140px;
+	height: 140px;
+	border-left-width: 80px;
+	border-top-width: 80px;
+	border-bottom-left-radius: 200px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 50px;
+}

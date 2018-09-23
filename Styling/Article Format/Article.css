@@ -1,0 +1,97 @@
+/*Navigation bar styling*/
+nav ol {
+	list-style: none;
+	display: flex;
+	padding: 0px 0px;
+}
+
+nav ol h3 {
+	margin: 2px 0px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+nav ol.related li {
+	margin: 0 12px;
+	padding: 4px 4px;
+	background-color: #66c6ff;
+	border-radius: 7px;
+}
+
+nav ol.related li:hover {
+	background-color: #89d3ff;
+}
+
+nav ol.breadcrumb li:after {
+	content: " >> ";
+}
+
+nav ol.breadcrumb li {
+	padding: 0;
+}
+
+nav ol.breadcrumb li {
+	text-decoration: none;
+}
+
+nav ol.related a {
+	text-decoration: none;
+	color: black;
+}
+
+/*Main area styling*/
+main {
+	display: grid;
+	grid-template-columns: 225px repeat(2, 1fr);
+	grid-gap: 20px;
+	padding: 20px 0px;
+}
+
+/*The main content */
+main .content {
+	background-color: #d8f0ff;
+	grid-column: 2 / 4;
+	grid-row: 1;
+	padding-left: 20px;
+}
+
+/*The aside*/
+main aside {
+	background-color: #d8f0ff;
+	grid-column: 1 / 2;
+	grid-row: 1;
+	padding-bottom: 10px;
+	#border-right: 1px solid black;
+}
+
+main aside h2 {
+	text-align: center;
+}
+
+main aside h4 {
+	margin: 0;
+	padding: 0px 10px;
+}
+
+main aside hr {
+	margin: 0;
+	width: 90%;
+	position: relative;
+	left: 5%;
+}
+
+main aside ul {
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+/*Footer*/
+footer {
+	background-color: black;
+	color: white;
+	padding: 20px 50px;
+}
+
+footer a::after {
+	content: "↗";
+}

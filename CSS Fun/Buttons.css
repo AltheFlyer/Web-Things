@@ -1,0 +1,75 @@
+header {
+	height : 100px;
+	font-family : "Century Gothic";
+	font-size : 48px;
+	text-indent : 10px;
+}
+header a {
+	color : black;
+}
+@keyframes grow {
+	0% {
+		transform: rotate(1, 1);
+	}
+	100% {
+		transform: scale(1.05, 1.05);
+	}
+}
+
+button.first:hover {
+	background-color: white;
+}
+
+button.first:active {
+	animation-name: grow;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+button.first {
+	font-family: Calibri;
+	font-size: 32px;
+	background-color: #21ba29;
+	border: 2px solid #21ba29;
+	padding:  25px 100px 25px 100px;
+	transition-duration: 0.4s;
+}
+
+button.side {
+	font-family: Calibri;
+	font-size: 16px;
+	background-color: #32c5ff;
+	border: 1px solid #32c5ff;
+	padding: 8px 24px 8px 24px;
+	border-radius: 5px;
+}
+
+button.side:hover {
+	background-color: #60d2ff;
+}
+
+button.round {
+	background-color: #fc170c;
+	border: 2px solid #fc170c;
+	border-radius: 50%;
+	box-shadow: 0px 8px #acadaf;
+}
+
+button.round:hover {
+	background-color: #ff2d23;
+}
+
+button.round:active {
+	transform: translateY(4px);
+	box-shadow: 0px 4px #888888;
+}
+
+button.perspective {
+	width: 70px;
+	height: 50px;
+}
+
+button.circle {
+	width: 50px;
+	height: 50px;
+}

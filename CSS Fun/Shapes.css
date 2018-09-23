@@ -1,0 +1,93 @@
+div {
+
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background-color: #ffcb63;
+}
+
+.rectangle {
+	width: 200px;
+	height: 100px;
+	background-color: #ffcb63;
+}
+
+.upTriangle {
+	/*width and height of 0*/
+	width: 0px;
+	height: 0px;
+	
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	
+	border-bottom: 100px solid #ffcb63;
+	
+}
+
+.bottomRightTriangle {
+	/*width and height of 0*/
+	width: 0px;
+	height: 0px;
+	
+	border-bottom: 50px solid #ffcb63;
+	border-right: 50px solid #ffcb63;
+	border-left: 50px solid transparent;
+	border-top: 50px solid transparent;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	
+	border-radius: 50px;
+	background-color: #ffcb63;
+}
+
+.oval {
+	width: 200px;
+	height: 100px;
+	
+	border-radius: 50%;
+	background-color: #ffcb63;
+}
+
+.trapezoid {
+	width: 50px;
+	height: 0px;
+	
+	border-bottom: 50px solid #ffcb63;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+}
+
+.bannerMain {
+	width: 100px;
+	height: 200px;
+	background-color: #ffcb63;
+}
+
+.bannerBottom {
+	display: flex;
+}
+
+.bannerLeft {
+	width: 0px;
+	height: 0px;
+	
+	border-top: 25px solid #ffcb63;
+	border-left: 25px solid #ffcb63;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid transparent;
+}
+
+.bannerRight {
+	width: 0px;
+	height: 0px;
+	
+	border-top: 25px solid #ffcb63;
+	border-right: 25px solid #ffcb63;
+	border-bottom: 25px solid transparent;
+	border-left: 25px solid transparent;
+}

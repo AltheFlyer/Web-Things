@@ -1,0 +1,32 @@
+.first {
+	font-weight: bold;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+#fancy {
+	font-family: "Century Gothic";
+	font-size: 24px;
+}
+
+#unintelligible {
+	font-family: "Wingdings";
+	font-weight: bold;
+}
+
+#for {
+	font-family: "Courier";
+}
+
+#surrounding {
+	border: 1px outset black;
+	border-width: 1px;
+	padding-left: 100px;
+}
+
+.surrounding {
+	border: 1px outset black;
+	display: inline;
+}

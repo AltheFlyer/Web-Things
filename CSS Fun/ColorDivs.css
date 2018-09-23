@@ -1,0 +1,109 @@
+header {
+	height : 100px;
+	font-family : "Century Gothic";
+	font-size : 48px;
+	text-indent : 10px;
+}
+a {
+	color : black;
+}
+@keyframes rotate {
+0% {
+transform : rotate(0deg);
+}
+50% {
+	transform : rotate(270deg);
+}
+100% {
+	transform : rotate(360deg);
+}
+}
+@keyframes antirotate {
+0% {
+	transform : rotate(360deg);
+}
+50% {
+	transform : rotate(270deg);
+}
+100% {
+	transform : rotate(0deg);
+}
+}
+@keyframes slide {
+	0% {
+	transform : translate(0,0);
+	}
+	5% {
+		transform : translate(0,0);
+	}
+	25% {
+	transform : translate(400px,0);
+	}
+	30% {	
+	transform : translate(400px,0);
+	}
+	50% {
+	transform : translate(400px,400px);
+	}
+	55%{
+		transform : translate(400px,400px);
+	}
+	75% {
+		transform : translate(0px,400px);
+	}
+	80%{
+		transform : translate(0px,400px);
+	}
+	100% {
+		transform : translate(0,0px);
+	}
+}
+div#chaos {
+	position : absolute;
+	color : black;
+	width : 500px;
+	top : 200px;
+	left : 50%;
+	font-size : 2em;
+	transform-origin : 0 0;
+	margin : 10px 10px;
+	background-color : #bb40ef;
+	animation-name : rotate;
+	animation-duration : 5s;
+	animation-timing-function : linear;
+	animation-iteration-count : infinite;
+}
+div#chaos p {
+	margin-left : 1em;
+}
+div#chaos hr {
+	animation-name : antirotate;
+	animation-duration : 5s;
+	animation-timing-function : linear;
+	animation-iteration-count : infinite;
+}
+div#slider {
+	position : absolute;
+	width : 100px;
+	height : 100px;
+	font-family : Calibri;
+	font-size : 3em;
+	background-color : #ffca75;
+	animation-name : slide;
+	animation-duration : 10s;
+	animation-timing-function : linear;
+	animation-iteration-count : infinite;
+}
+
+div#space {
+	width: 100%;
+	height: 600px;
+	background-color: #58fc68;
+}
+div#bottom {
+	margin-left: 10%;
+	width : 80%;
+	height : 600px;
+	background-color: #68a2ff;
+}
+

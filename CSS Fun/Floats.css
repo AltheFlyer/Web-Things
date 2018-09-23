@@ -1,0 +1,55 @@
+header {
+	height : 100px;
+	font-family : "Century Gothic";
+	font-size : 48px;
+	text-indent : 10px;
+}
+header a {
+	color : black;
+}
+
+body {
+	width: 90%;
+	margin: 0 auto;
+	font: 16px "Open Sans";
+}
+
+.float {
+	float: left;
+	margin: 10px;
+	width: 150px;
+	height: 150px;
+	background-color: #5eff7b;
+	padding: 5px;
+}
+
+.text {
+	background-color: #68ffd1;
+	padding: 10px;
+}
+
+.clear {
+	clear: left;
+}
+
+.large {
+	height: 250px;
+}
+
+.wrapper {
+	background-color: #3ef2da;
+	padding: 10px;
+	/*
+	Other methods:
+	overflow: auto;
+	OR
+	display: flow-root;
+	*/
+}
+
+/*The clearfix hack, used to make divs extend beyond floats*/
+.wrapper::after {
+  content: "";
+  clear: both;
+  display: block;
+}

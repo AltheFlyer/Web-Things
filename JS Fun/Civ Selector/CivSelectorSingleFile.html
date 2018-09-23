@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "author" content = "Allen Liu">
+		<meta name = "description" content = "For Civ 5">
+		<title>Civ 5 Generator</title>
+		<style>
+			body {
+				font-family: 'Open Sans';
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			select {
+				min-width: 100px;
+				display: block;
+				margin: 0 auto;
+			}
+
+			h2, h3, h4 {
+				text-align: center;
+				margin-top: 5px;
+				margin-bottom: 10px;
+			}
+
+			button {
+				font-family: 'Open Sans';
+				background-color: #1eff6c;
+				border-color: #1eff6c;
+				border-style: solid;
+				border-radius: 5px;
+				float: left;
+				margin: 3px 3px 3px 3px;
+			}
+
+			button:hover {
+				background-color: #54ff8f;
+			}
+
+			/*Scrolldowns*/
+			.pools {
+				overflow: auto;
+			}
+
+			.civList, .banList, .selectList {
+				width: 30%;
+				float: left;
+				min-height: 90px;
+			}
+
+			.pools h4 {
+				min-height: 45px;
+			}
+
+			.pools, .actions{
+				padding: 5px 5px 5px 5px;
+				margin: 0px 0px 10px 0px;
+				background-color: #5bbbff;
+			}
+
+			/*Other list styling at bottom of doc*/
+
+			/*Actions*/
+			.actions {
+				overflow: auto;
+			}
+
+			.interact, .rando {
+				float: left;
+				width: 48%;
+				min-height: 126px;
+				margin-left: 1%;
+				margin-right: 1%;
+				background-color: #42d4f4;
+				text-align: center;
+			}
+
+			.buttons{
+				display: flex;
+				align-items: center;
+				justify-content: center;	
+			}
+
+			.rando button{
+				display: flex;
+			  align-items: center;
+			  justify-content: center;
+			}
+
+			/*The display section*/
+			.display {
+				margin-top: 10px;
+				padding-top: 5px;
+				width: 100%;
+				overflow: auto;
+				background-color: #5bbbff;
+			}
+
+			.civDisplay, .banDisplay, .selectDisplay {
+				height: 380px;
+				width: 30%;
+				overflow: auto;
+				float: left;
+			}
+
+			/*For lists and displays*/
+			.civDisplay, .civList{
+				margin: 10px 2.5% 10px; 2.5%;
+				background-color: #22f74d;
+			}
+
+			.banDisplay, .banList {
+				margin: 10px 2.5% 10px 0%;
+				background-color: #ff7c66;
+			}
+
+			.selectDisplay, .selectList {
+				margin: 10px 2.5% 10px 0%;
+				background-color: #f2db68;
+			}			
+		</style>
+	</head>
+	
+	<body>
+		<h1>Civ 5 Generator</h1>
+		<div class = "pools">
+			<h2>Civ Pools</h2>
+			<!--The civs that can be selected-->
+			<div class = "civList">
+			<h4>List of possible civs</h4>
+				<select class = "pool"></select>
+			</div>
+			
+			<!--The civs that can't be selected-->
+			<div class = "banList">
+			<h4>Civs that have been banned</h4>
+				<select class = "banned"></select>
+			</div>
+			
+			<!--The civs that have been selected-->
+			<div class = "selectList">
+			<h4>Civs that have been chosen</h4>
+				<select class = "selected"></select>
+			</div>
+		</div>
+		
+		<div class = "actions">
+			<h2>Pick/ban civs</h2>
+			<div class = "interact">
+				<h3>Manual Actions</h3>
+				<div class = "buttons">
+					<button class = "ban move" title = "Moves the civ in the current pool to the ban pool.">
+						Ban civ
+					</button>
+					
+					<button class = "unban move" title = "Moves the civ in the ban pool to the civ pool.">
+						Unban civ
+					</button>
+					
+					<button class = "select move" title = "Selects the civ in the civ pool.">
+						Select civ
+					</button>
+					
+					<button class = "deselect move" title = "Deselects the civ in the selected pool.">
+						Deselect civ
+					</button>
+				</div>
+				<div class = "buttons">
+					<button class = "unbanall" title = "Unbans all civs.">
+						Unban all
+					</button>
+					<button class = "deselectall" title = "Deselects all civs.">
+						Deselect all
+					</button>
+				</div>
+			</div>
+			
+			<div class = "rando">
+				<!--The Randomizer-->
+				<h3>Randomizer</h3>
+				<div class = "buttons">
+				<button class = "random">Randomize</button>
+				</div>
+				<input type="number" value = "1" class = "randNumber" title = "How many civs to select.">
+			</div>
+		</div>
+		
+		<!-- Displays the text of all the lists-->
+		<div class = "display">
+			<h2>Civ Lists</h2>
+			<div class = "civDisplay">
+				<h3>Civ Pool</h3>
+				<ol>
+				</ol>
+			</div>
+			<div class = "banDisplay">
+				<h3>Banned Civs</h3>
+				<ol>
+				</ol>
+			</div>
+			<div class = "selectDisplay">
+				<h3>Selected Civs</h3>
+				<ol>
+				</ol>
+			</div>
+		</div>
+		
+		<script>
+			//List of civs
+			var civs = ['American', 'Arabian', 'Assyrian', 'Austrian', 'Aztec', 'Babylonian',
+			'Brazilian', 'Byzantine', 'Carthaginian', 'Celtic', 'Chinese', 'Danish',
+			 'Egyptian', 'English', 'Ethiopian', 'French', 'German', 'Greek',
+			  'Hunnic', 'Incan', 'Indian', 'Indonesian', 'Iroquois', 'Japanese', 'Korean',
+			   'Mayan', 'Mongolian', 'Moroccan', 'Ottoman', 'Persian', 'Polish', 'Polynesian',
+				'Portuguese', 'Roman', 'Russian', 'Shoshone', 'Siamese', 'Songhai', 'Spanish',
+				 'Swedish', 'Venetian', 'Zulu'
+			];
+			civs = civs.sort();
+			var listLength = civs.length;
+
+			//The dropdowns
+			var civPool = document.querySelector(".pool");
+			var banPool = document.querySelector(".banned");
+			var selectPool = document.querySelector(".selected");
+
+			//The buttons
+			var banButton = document.querySelector(".ban");
+			var unbanButton = document.querySelector(".unban");
+			var selectButton = document.querySelector(".select");
+			var deselectButton = document.querySelector(".deselect");
+			var randomButton = document.querySelector(".random");
+			unbanAllButton = document.querySelector(".unbanall");
+			deselectAllButton = document.querySelector(".deselectall");
+
+			//For randomness
+			var randomField = document.querySelector(".randNumber");
+
+			//Text displays
+			var civDisplay = document.querySelector(".civDisplay");
+			var banDisplay = document.querySelector(".banDisplay");
+			var selectDisplay = document.querySelector(".selectDisplay");
+
+			//Actions
+			banButton.addEventListener('click', function(){moveOption(civPool, banPool); updateDisplay(civDisplay, civPool); updateDisplay(banDisplay, banPool)});
+			unbanButton.addEventListener('click', function(){moveOption(banPool, civPool); updateDisplay(banDisplay, banPool); updateDisplay(civDisplay, civPool)});
+			selectButton.addEventListener('click', function(){moveOption(civPool, selectPool); updateDisplay(civDisplay, civPool); updateDisplay(selectDisplay, selectPool)}); 
+			deselectButton.addEventListener('click', function(){moveOption(selectPool, civPool); updateDisplay(selectDisplay, selectPool); updateDisplay(civDisplay, civPool)});
+			randomButton.addEventListener('click', function(){loopRandom(randomField.value)});
+			unbanAllButton.addEventListener('click', function() {moveAll(banPool); 	updateDisplay(banDisplay, banPool);});
+			deselectAllButton.addEventListener('click', function() {moveAll(selectPool); updateDisplay(selectDisplay, selectPool)});
+
+			//Add all civs to the civ pool
+			for (var i = 0; i < civs.length; ++i) {
+				var civ = document.createElement("option");
+				civ.value = civs[i];
+				civ.textContent = civs[i];
+				civPool.append(civ);
+			}
+
+			//First display update:
+			updateDisplay(civDisplay, civPool);
+
+			//Moves an option from one drop-down to another
+			function moveOption(start, finish){
+				var currentCiv = start.value;
+				//Add the civ
+				if (currentCiv !== "") {
+					var op = document.createElement("option");
+					op.value = currentCiv;
+					op.textContent = currentCiv;
+					finish.add(op);
+					//Remove the civ
+					var x = start.selectedIndex;
+					start.remove(x);
+					//Set the selection
+					start.selectedIndex = x;
+					//update list
+					updateList(finish);
+				}
+			}
+
+			//Sorts the list
+			function updateList(list) {
+				//Why js
+				sortedCivs = [];
+				var listLength = list.options.length;
+				var newest = list.options[listLength - 1].text;
+				var selection = 0;
+				
+				for (var i = 0; i < listLength; ++i) {
+					sortedCivs.push(list.options[0].value);
+					list.remove(0);
+				}
+				sortedCivs = sortedCivs.sort();
+				for (var i = 0; i < listLength; ++i) {
+					var op = document.createElement("option");
+					op.value = sortedCivs[i];
+					op.textContent = sortedCivs[i];
+					list.add(op);
+					//This is to auto select the moved civ
+					if (sortedCivs[i] === newest) {
+						selection = i;
+					}
+				}
+				list.selectedIndex = selection;
+			}
+
+			function getRandomInt(max) {
+				return Math.floor(Math.random() * Math.floor(max));
+			}
+				
+			function moveRandomCiv(){
+				var random = getRandomInt(civPool.options.length)
+				var currentCiv = civPool.options[random].text;
+				//Add the civ
+				var op = document.createElement("option");
+				op.value = currentCiv;
+				op.textContent = currentCiv;
+				selectPool.add(op);
+				//Remove the civ
+				civPool.remove(random);
+			}
+
+			function loopRandom(times) {
+				if (times < 1) {
+					alert("This does nothing");
+				} else {
+					if (times > civPool.options.length) {
+						alert("Defaulting to max number of civs");
+						times = civPool.options.length;
+					}
+					for (var i = 0; i < times; ++i) {
+						moveRandomCiv();
+					}
+				}
+				updateList(selectPool);
+				updateDisplay(civDisplay, civPool);
+				updateDisplay(selectDisplay, selectPool);
+			}
+
+			function updateDisplay(display, list) {
+				var html = "";
+				var ll = list.options.length;
+				html = "<ol>";
+				for (var i = 0; i < ll; ++i) {
+					html += "<li>" + list.options[i].text + "</li>";
+				}
+				html += "</br>";
+				display.innerHTML = display.innerHTML.slice(0, display.innerHTML.indexOf("<ol>"));
+				display.innerHTML += html;
+			}
+
+			function moveAll(start) {
+				var len = start.options.length;
+				for (var i = 0; i < len; ++i) {
+					start.selectedIndex = 0;
+					moveOption(start, civPool);
+				}
+				updateDisplay(civDisplay, civPool);
+			}		
+		</script>
+	</body>
+</html>

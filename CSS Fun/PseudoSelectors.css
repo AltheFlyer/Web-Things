@@ -1,0 +1,58 @@
+header {
+	height: 100px;
+	font-family: "Century Gothic";
+	font-size: 48px;
+	text-indent: 10px;
+	background-color: 
+}
+
+a {
+	color: black;
+}
+
+/*Based on state of the link*/
+#example1:hover,
+#example1:active,
+#example1:focus {
+	color: black;
+	font-size: 48px;
+	text-decoration-style: wavy;
+}
+
+/*General*/
+h1{
+	font-family: "Calibri";
+}
+
+ul {
+  padding: 0;
+  font-family: "Calibri";
+}
+
+li {
+	padding:3px;
+	margin-bottom: 5px;
+	list-style-type: none;
+}
+
+/*Specific*/
+li:nth-of-type(even) {
+	background-color: #ccc;
+}
+
+li:nth-of-type(odd) {
+	background-color: #eee;
+}
+
+/*Works on all content of the type, starting with http*/
+/*Does work after the content in question*/
+[href^=Class]::after {
+  content: '^';
+}
+
+/*Makes things huge if highlighted*/
+/*Also blocks other highlight attributes*/
+.dangerous::selection{
+	color: white;
+	background-color: black;
+}

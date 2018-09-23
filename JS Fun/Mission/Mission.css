@@ -1,0 +1,35 @@
+@keyframes textflow{
+0%{
+	color: white;
+}
+50%{
+	color: black;
+}
+100%{
+	color: white;
+}
+}
+
+@keyframes textset{
+0%{
+	color: white;
+}
+50%{
+	color: black;
+}
+}
+
+.statement {
+	text-align: center;
+	animation-name: textflow;
+	animation-duration: 2s;
+	animation-iteration-count: 7;
+}
+
+.countdown {
+	color: red;
+	text-align: center;
+	font-size: 15em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
